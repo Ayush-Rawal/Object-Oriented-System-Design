@@ -1,18 +1,21 @@
-#include<iostream>
+#include <iostream>
 
-class test {
+class test
+{
     int a;
-    
-    public:
-        void setNum(int x);
-        friend void printNum(test);
-        friend void printNum();
-        void show() {
-            std::cout<<a<<std::endl;
-        }
+
+  public:
+    void setNum(int x);
+    friend void printNum(test);
+    friend void printNum();
+    void show()
+    {
+        std::cout << a << std::endl;
+    }
 };
 
-void test::setNum(int val) {
+void test::setNum(int val)
+{
     a = val;
     return;
 }
@@ -32,12 +35,14 @@ void printNum() {
     return;
 } */
 
-void printNum(test obj1) {
+void printNum(test obj1)
+{
     obj1.a = 200;
-    std::cout<<obj1.a;
+    std::cout << obj1.a;
 }
 
-int main() {
+int main()
+{
     test obj;
     obj.setNum(40);
     printNum(obj);
